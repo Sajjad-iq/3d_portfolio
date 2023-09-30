@@ -3,12 +3,13 @@ import { motion, useAnimation } from "framer-motion";
 import { styles } from "../style";
 import { services } from "../constants";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface Props {
   title: string
   icon: any,
   inView: boolean
+  isActive: boolean
 }
 
 const ServiceCard = (props: Props) => {
@@ -16,23 +17,26 @@ const ServiceCard = (props: Props) => {
   const animation = useAnimation()
 
   useEffect(() => {
-    if (!props.inView) {
-      animation.start({
-        x: 0,
-        opacity: 0
-      })
-    } else if (props.inView) {
-      animation.start({
-        x: 0,
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: "spring",
-          delay: 1.5,
-          duration: 0.80,
-          ease: "easeOut",
-        },
-      })
+    if (!props.isActive) {
+
+      if (!props.inView) {
+        animation.start({
+          x: 0,
+          opacity: 0
+        })
+      } else if (props.inView) {
+        animation.start({
+          x: 0,
+          y: 0,
+          opacity: 1,
+          transition: {
+            type: "spring",
+            delay: 1.5,
+            duration: 0.80,
+            ease: "easeOut",
+          },
+        })
+      }
     }
   }, [props.inView])
 
@@ -68,35 +72,40 @@ const About = () => {
     threshold: 0.1,
   });
   const animation = useAnimation()
+  const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {
-    if (inView) {
-      animation.start({
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 1,
-          delay: 0.8,
-        }
-      })
-    } else {
-      animation.start({
-        y: -50,
-        opacity: 0,
-      })
+    if (!isActive) {
+      if (inView) {
+        animation.start({
+          y: 0,
+          opacity: 1,
+          transition: {
+            type: "spring",
+            duration: 1,
+            delay: 0.8,
+          }
+        })
+        setIsActive(true)
+      } else {
+        animation.start({
+          y: -50,
+          opacity: 0,
+        })
+      }
     }
+
   }, [inView])
 
 
   return (
     <section id="about" ref={ref} className={`${styles.paddingX} pt-20 mx-auto w-fit`}>
-      <motion.div
+      <motion.article
         animate={animation}
       >
         <p className={`${styles.sectionSubText}`}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
+      </motion.article>
 
       <motion.p
         animate={animation}
@@ -107,7 +116,7 @@ const About = () => {
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service) => (
-          <ServiceCard inView={inView} key={service.title} {...service} />
+          <ServiceCard isActive={isActive} inView={inView} key={service.title} {...service} />
         ))}
       </div>
     </section >

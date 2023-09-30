@@ -1,4 +1,4 @@
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { About, Hero, Navbar, Tech } from "./components";
 
 function App() {
 
@@ -10,8 +10,9 @@ function App() {
       </section>
 
       <About />
-      {/*
       <Tech />
+
+      {/*
       <Works />
       <Feedbacks />
       <section className='relative z-0'>

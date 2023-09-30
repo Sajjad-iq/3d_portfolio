@@ -18,7 +18,7 @@ const Hero = () => {
               repeatType: "loop",
               delay: 2
             }}
-            className='w-5 h-5 rounded-full bg-[#133337]' />
+            className='w-5 h-5 rounded-full bg-[#3f7c84]' />
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
 
