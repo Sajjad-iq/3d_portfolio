@@ -16,8 +16,9 @@ function App() {
 
       <section className={`${styles.paddingX} relative z-0 flex justify-center items-center m-auto mt-60 pb-20 `} >
         <Contact />
-        <StarsCanvas />
       </section>
+      <StarsCanvas />
+
     </section>
   )
 }
