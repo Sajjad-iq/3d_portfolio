@@ -1,4 +1,5 @@
-import { About, Hero, Navbar, Tech } from "./components";
+import { About, Contact, Hero, Navbar, StarsCanvas, Tech, Works } from "./components";
+import { styles } from "./style";
 
 function App() {
 
@@ -11,14 +12,12 @@ function App() {
 
       <About />
       <Tech />
-
-      {/*
       <Works />
-      <Feedbacks />
-      <section className='relative z-0'>
+
+      <section className={`${styles.paddingX} relative z-0 flex justify-center items-center m-auto mt-60 pb-20 `} >
         <Contact />
         <StarsCanvas />
-      </section> */}
+      </section>
     </section>
   )
 }

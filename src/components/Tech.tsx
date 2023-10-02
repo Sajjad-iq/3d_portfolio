@@ -22,8 +22,8 @@ const Tech = () => {
           opacity: 1,
           transition: {
             type: "spring",
-            duration: 1,
-            delay: 0.8,
+            duration: 0.6,
+            delay: 0.6,
           }
         })
         setIsActive(true)
@@ -39,7 +39,7 @@ const Tech = () => {
 
 
   return (
-    <section ref={ref} className={`flex items-center flex-col  justify-center pt-60 ${styles.paddingX} w-fit`}>
+    <section ref={ref} className={`flex items-center flex-col  justify-center pt-60 ${styles.paddingX} w-fit m-auto`}>
 
       <motion.article animate={animation}>
         <p className={`${styles.sectionSubText} text-center`}>

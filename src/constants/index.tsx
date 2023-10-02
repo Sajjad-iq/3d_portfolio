@@ -10,17 +10,14 @@ import {
     reactjs,
     redux,
     tailwind,
-    nodejs,
-    mongodb,
     git,
-    figma,
     meta,
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
+    googlePlus,
+    shortly,
+    animelibrary
 } from "../assets";
 
 export const navLinks = [
@@ -86,23 +83,12 @@ const technologies = [
         name: "Tailwind CSS",
         icon: tailwind,
     },
-    {
-        name: "Node JS",
-        icon: nodejs,
-    },
-    {
-        name: "MongoDB",
-        icon: mongodb,
-    },
 
     {
         name: "git",
         icon: git,
     },
-    {
-        name: "figma",
-        icon: figma,
-    },
+
 ];
 
 const experiences = [
@@ -189,30 +175,52 @@ const testimonials = [
 
 const projects = [
     {
-        name: "Car Rent",
-        description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        name: "Google Plus",
+        description: "FullStack social media app . Google Plus is the old famous social media platform by Google that helps people do whatever they want. Anyone like me who loved this platform will be happy to use it again.",
         tags: [
             {
                 name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "Node Js",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "Styled Components",
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        liveLink: "https://googleplus.onrender.com/",
+        image: googlePlus,
+        source_code_link: "https://github.com/Sajjad-iq/google_plus_client_side/",
+    },
+
+    {
+        name: "Anime Library",
+        description:
+            "Anime Library is a web app that helps people find their favorite anime with brief and many details by sorting lists and recommendations and infinite scrolling results of clickable cards.",
+        tags: [
+            {
+                name: "react",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "restApi",
+                color: "green-text-gradient",
+            },
+            {
+                name: "scss",
+                color: "pink-text-gradient",
+            },
+        ],
+        liveLink: "https://sajjad-iq.github.io/anime-library/",
+        image: animelibrary,
+        source_code_link: "https://github.com/Sajjad-iq/anime-library/tree/master",
     },
     {
-        name: "Job IT",
-        description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        name: "Shortly",
+        description: "Shortly is a web app that helps people with their long links and makes them short fast in a very simple technique. This app is a challenge from the front-end-mentor website.",
         tags: [
             {
                 name: "react",
@@ -223,33 +231,14 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "Styled Components",
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
-    },
-    {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-        tags: [
-            {
-                name: "nextjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "supabase",
-                color: "green-text-gradient",
-            },
-            {
-                name: "css",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        liveLink: "https://sajjad-iq.github.io/url-shorting/",
+
+        image: shortly,
+        source_code_link: "https://github.com/Sajjad-iq/url-shorting",
     },
 ];
 

@@ -23,9 +23,9 @@ import shopify from "./company/shopify.webp";
 import starbucks from "./company/starbucks.webp";
 import tesla from "./company/tesla.webp";
 
-import carrent from "./carrent.webp";
-import jobit from "./jobit.webp";
-import tripguide from "./tripguide.webp";
+import googlePlus from "./googlePlus.webp";
+import shortly from "./url-shorting.webp";
+import animelibrary from "./anime-library.webp";
 
 export {
   backend,
@@ -50,7 +50,7 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
+  googlePlus,
+  animelibrary,
+  shortly
 };

@@ -82,8 +82,8 @@ const About = () => {
           opacity: 1,
           transition: {
             type: "spring",
-            duration: 1,
-            delay: 0.8,
+            duration: 0.6,
+            delay: 0.6,
           }
         })
         setIsActive(true)
@@ -114,7 +114,7 @@ const About = () => {
         I'm a skilled front-end developer with experience in frameworks like React JS and front-end Development systems in general like  CSS preprocessing and CSS fame works and debugging and performance metrics and web security, I'm a quick learner and flexible and passionate. Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-wrap gap-10 justify-center items-center'>
         {services.map((service) => (
           <ServiceCard isActive={isActive} inView={inView} key={service.title} {...service} />
         ))}
