@@ -10,11 +10,11 @@ const Contact = () => {
 
   return (
     <div
-      className={`w-screen flex justify-center items-center`}
+      className={`w-full flex justify-center items-center`}
     >
       <motion.div
         variants={{}}
-        className='flex-[0.75] bg-[#217985] p-8 rounded-2xl '
+        className=' w-full flex-[0.75] bg-[#217985] p-8 rounded-2xl '
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
